@@ -626,6 +626,7 @@ button {
     transition: .5s ease;
     background-color: rgb(45, 45, 45, 0.5);
     margin: 0 auto;
+    
 }
 
 .container_main {
@@ -752,10 +753,52 @@ button {
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
 }
+/* Add a smooth transition for the hover effect */
+.blog_box {
+    background: #ffffff; /* Optional: Add a background to the boxes */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Zoom and elevate the box on hover */
+.blog_box:hover {
+    transform: translateY(-10px) scale(1.05); /* Moves up and zooms in slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add stronger shadow for focus */
+}
+
+/* Optional: Ensure images fit nicely inside boxes */
+.blog_img {
+    width: 100%;
+    height: 200px; /* Adjust as needed */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8; /* Placeholder color for empty divs */
+}
+
+/* Style for prep_text */
+.prep_text {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #333; /* Adjust for readability */
+}
+
+/* Text paragraph inside the box */
+.lorem_text {
+    font-size: 14px;
+    color: #666;
+    padding: 10px;
+    text-align: justify;
+}
+
 
 .blog_img {
     width: 100%;
-    background-image: url(../images/blog-img1.png);
+    background-image: url(../images/img-11.png);
     height: auto;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -763,7 +806,7 @@ button {
 
 .blog_img_2 {
     width: 100%;
-    background-image: url(../images/blog-img2.png);
+    background-image: url(../images/img-7.png);
     height: auto;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -908,7 +951,7 @@ textarea#comment.massage-bt::placeholder {
     text-align: center;
 }
 
-.send_bt a {
+.send_bt button {
     width: 100%;
     text-align: center;
     font-size: 16px;
@@ -919,12 +962,15 @@ textarea#comment.massage-bt::placeholder {
     display: block;
     font-weight: bold;
     border-radius: 5px;
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Add pointer cursor for better UX */
 }
 
-.send_bt a:hover {
+.send_bt button:hover {
     color: #fefefd;
     background-color: #252f2d;
 }
+
 
 
 /* contact section end */
